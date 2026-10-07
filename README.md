@@ -1,3 +1,134 @@
+# Fritzing App Analysis
+
+## Objetivo
+
+Este repositorio contiene el código fuente de Fritzing 1.0.8 y se utiliza para analizar su arquitectura interna con el fin de diseñar una migración progresiva a Godot 4.7.
+
+El objetivo no es mantener ni ampliar la versión Qt/C++ original, sino comprender su funcionamiento para desarrollar una nueva implementación moderna basada en Godot.
+
+---
+
+## Objetivos del análisis
+
+- Comprender la arquitectura general de Fritzing.
+- Identificar módulos, dependencias y responsabilidades.
+- Documentar el flujo de datos interno.
+- Analizar el sistema de piezas (.fzp).
+- Analizar el sistema de renderizado SVG.
+- Comprender las vistas:
+  - Breadboard
+  - Schematic
+  - PCB
+- Analizar el autorouter.
+- Analizar la exportación Gerber.
+- Diseñar una arquitectura equivalente para Godot 4.7.
+
+---
+
+## Objetivo final
+
+Crear una nueva generación de Fritzing basada en Godot 4.7 con las siguientes características:
+
+- Arquitectura moderna y mantenible.
+- Escenas y nodos nativos de Godot.
+- Soporte para SVG.
+- Compatibilidad con piezas Fritzing (.fzp).
+- Sistema de conexiones reutilizable.
+- Vistas Breadboard, Schematic y PCB.
+- Preparación para futuras mejoras:
+  - Simulación
+  - Exportación
+  - Plugins
+  - IA
+
+---
+
+## Preguntas clave
+
+### Arquitectura
+
+- ¿Qué módulos son esenciales?
+- ¿Qué dependencias pueden eliminarse?
+- ¿Qué subsistemas deben reescribirse?
+
+### Sistema de piezas
+
+- ¿Cómo se cargan los archivos .fzp?
+- ¿Cómo se relacionan con los SVG?
+- ¿Cómo se construye la base de datos de piezas?
+
+### Renderizado
+
+- ¿Cómo se muestran las vistas?
+- ¿Qué responsabilidades tiene cada vista?
+- ¿Cómo se gestionan las conexiones?
+
+### PCB
+
+- ¿Cómo funciona el modelo PCB?
+- ¿Cómo funciona el autorouter?
+- ¿Cómo se generan los Gerbers?
+
+---
+
+## Estrategia de migración
+
+### Fase 1
+
+- Cargar piezas .fzp
+- Renderizar SVG
+- Arrastrar y soltar componentes
+- Guardar y cargar proyectos
+
+### Fase 2
+
+- Vista Breadboard
+- Vista Schematic
+- Sistema de cables y conectores
+
+### Fase 3
+
+- Vista PCB
+- Reglas de diseño
+- Exportación Gerber
+
+### Fase 4
+
+- Autorouter
+- Simulación
+- Optimización
+
+---
+
+## Entorno analizado
+
+- Fritzing 1.0.8
+- Qt 6.9.3
+- MinGW 13.1
+- QuaZip 1.4
+- libgit2 1.7.1
+- ngspice 42
+- Boost 1.85.0
+- Clipper 6.4.2
+- svgpp 1.3.1
+
+---
+
+## Estado
+
+✅ Fritzing 1.0.8 compilado correctamente
+
+✅ Versión Release funcional
+
+✅ Versión Portable funcional
+
+✅ Repositorio de piezas depurado
+
+✅ Entorno de compilación documentado
+
+🚧 En análisis para migración a Godot 4.7
+
+
 # Fritzing
 
 |Branch|Badge|
